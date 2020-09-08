@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Amazon Clone With React( Hooks + Context API ) and Firebase Authentication
 
-## Available Scripts
+#### Live Project: https://clone-ddfd4.web.app/
 
-In the project directory, you can run:
 
-### `npm start`
+## SnapShot
+![picture](https://res.cloudinary.com/kirankumargonti/image/upload/v1599566728/GituHub/amazon_kfmiwb.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Quick Start
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+    # Clone the application
+    git clone https://github.com/kirankumargonti/amazon-clone.git
 
-### `npm test`
+    # Install dependencies
+    npm install
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    # Serve on localhost:3000
+    npm start
 
-### `npm run build`
+## Project Setup
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Firebase Setup
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [ Create a Project and add Firebase Configuration](https://firebase.google.com/docs/web/setup) to
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - src / firebase.js file it looks like this
 
-### `npm run eject`
+  ```
+  const firebaseConfig = {
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+      apiKey: "",
+      authDomain: "",
+      databaseURL: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: ": "",
+      measurementId: ""
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  };
+  ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 2. Login Authentication
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Goto Authentication tab left side in the project Dashboard
+- Enable [Email/Password ](https://firebase.google.com/docs/auth/web/email-link-auth) to your project
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Hosting 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    # Build for production
+    $ npm run build
 
-### Code Splitting
+    # Install firebase tools
+    $ npm install -g firebase-tools
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+    # Login to firebase
+    $ firebase login
 
-### Analyzing the Bundle Size
+    # Initialize your firebase project
+    $ firebase init
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+    # Important Steps
+        - Use an existing project
+        - What do you want to use as  your public directory?
+          build
+        - Configure as a single-page app 
+          (rewrite all urls to /index.html)? Yes
+        - File build/index.html already exists. Overwrite? No
 
-### Making a Progressive Web App
+    # Deploy to firebase
+    $ firebase deploy
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## For more information refer Firebase docs 
+https://firebase.google.com/docs
